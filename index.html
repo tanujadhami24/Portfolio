@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <div class="sidebar sidebargo">
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/intro.html">My intro</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact Me</a></li>
+
+            </ul>
+        </nav>
+</div>
+   <div class="main">
+    <div class="hamburger">
+        <img class="menu" src="menu.png" alt="" width="23">
+        <img class="cross" src="cross.png" alt="" width="23">
+    </div>
+      <div class="infoContainer">
+        <div class="devInfo">
+            <div class="hello">Hi I am,</div>
+            <div class="name">TANUJA DHAMI</div>
+            <div class="aim"><h1>I'm <span class ="multitext"></span></h1></div>
+            <div class="SI"><P> I'm a Btech(CS) Student and I live in Haldwani, I'm working on web development,currently I am learning front end development in this journey let us work together.</P></div>
+            <div class="buttons">
+                <a href="cv.txt" target="_blank">
+                <button class="btn">MY CV</button></a>
+                <a href="/contact.html"><button class="btn"> Contact me </button></a>
+            </div>
+        </div>
+        <div class="devpic"><img src="dev3.jpg" style= "mix-blend-mode:darken" alt="abhijeet kukreti"></div>
+         
+      </div>
+   </div>
+</div> 
+<script src="script.js"></script>  
+<span id="multitext"></span>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('.multitext', {
+      strings: ['a web developer.', ' a motivational speaker.','a good team leader.'],
+      loop : true,
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 1500,
+    });
+   </script> 
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxJWRllzVuDGdUFRwobxTwyFe7NDgdRsNbzTmjpu8-Ox5fibhi_igEinRjc8TerDU-nNQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
